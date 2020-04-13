@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Farms } from "./views/farms";
+import { Fitness } from "./views/fitness";
 import { Farmview } from "./views/farmview";
 import { About } from "./views/about";
 import { FAQ } from "./views/faq";
@@ -28,7 +28,7 @@ export const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route exact path="/farms" component={Farms} />
+						<Route exact path="/fitness" component={Fitness} />
 						<Route exact path="/farms/farm1" component={Farmview} />
 						<Route exact path="/about" component={About} />
 						<Route exact path="/about/faq" component={FAQ} />

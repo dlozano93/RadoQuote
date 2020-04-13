@@ -9,7 +9,7 @@ export const Navbar = () => {
 				<div className="col">
 					<Link to="/">
 						<a className="navbar-brand" href="#">
-							{"Florida's Farms to your Table"}
+							{"Random Quote Generator"}
 						</a>
 					</Link>
 				</div>
@@ -35,9 +35,9 @@ export const Navbar = () => {
 								</Link>
 							</li>
 							<li className="nav-item mx-2">
-								<Link to="/farms">
+								<Link to="/fitness">
 									<a className="nav-link" href="#">
-										Farms
+										Fitness Quote
 									</a>
 								</Link>
 							</li>
