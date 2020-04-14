@@ -8,7 +8,6 @@ import { Farmview } from "./views/farmview";
 import { About } from "./views/about";
 import { FAQ } from "./views/faq";
 import { Contact } from "./views/contact";
-import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -33,7 +32,6 @@ export const Layout = () => {
 						<Route exact path="/about" component={About} />
 						<Route exact path="/about/faq" component={FAQ} />
 						<Route exact path="/about/contact" component={Contact} />
-						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
