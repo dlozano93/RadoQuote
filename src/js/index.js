@@ -10,6 +10,7 @@ import "../styles/index.scss";
 
 //import your own components
 import Layout from "./layout";
+import { Imagecard } from "./component/imagecard";
 
 //render your react application
 ReactDOM.render(<Layout />, document.querySelector("#app"));

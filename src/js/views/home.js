@@ -1,15 +1,15 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Imagecard } from "../component/imagecard";
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>This is Home</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
+	<>
+		<div className="container-fluid bg-warning">
+			<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto bg-info">
+				<Imagecard />
+			</div>
+		</div>
+		<br />
+	</>
 );

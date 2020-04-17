@@ -41,6 +41,11 @@ export const Navbar = () => {
 									</a>
 								</Link>
 							</li>
+							<li className="nav-item mx-2">
+								<a className="nav-link" href="#">
+									Random Quote
+								</a>
+							</li>
 							<li className="nav-item mx-2 dropdown">
 								<Link to="/about">
 									<a className="nav-link dropdown-toggle">About us</a>
