@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.scss";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light content d-flex justify-content-around">
@@ -35,14 +37,14 @@ export const Navbar = () => {
 								</Link>
 							</li>
 							<li className="nav-item mx-2">
-								<Link to="/fitness">
+								<Link to="/">
 									<a className="nav-link" href="#">
 										Fitness Quote
 									</a>
 								</Link>
 							</li>
 							<li className="nav-item mx-2">
-								<a className="nav-link" href="#">
+								<a className="nav-link" href="#" onClick={() => actions.generateRandomPair()}>
 									Random Quote
 								</a>
 							</li>
