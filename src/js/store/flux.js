@@ -44,14 +44,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(data);
 					});
 			},
-			generateRandomPair: () => {
-				const store = getStore();
-				setStore({
-					randomImage: store.allImages[Math.floor(Math.random() * store.allImages.length)].download_url
-				});
-				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
+			getAllInspirationalImages: () => {
+				fetch(
+					"https://8080-dae0ec2d-e971-4fe6-aceb-4bbe348a1638.ws-us02.gitpod.io/wp-json/sample_api/v1/inspirational"
+				)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ allInspirationalImages: data });
+						console.log(data[0].image.sizes);
+					});
 			},
-			generateInspirationalPair: () => {
+			getAllSpiritualImages: () => {
+				fetch(
+					"https://8080-dae0ec2d-e971-4fe6-aceb-4bbe348a1638.ws-us02.gitpod.io/wp-json/sample_api/v1/spiritual"
+				)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ allSpiritualImages: data });
+						console.log(data);
+					});
+			},
+			generateRandomPair: () => {
 				const store = getStore();
 				setStore({
 					randomImage: store.allImages[Math.floor(Math.random() * store.allImages.length)].download_url
@@ -61,7 +74,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 			generateSpiritualPair: () => {
 				const store = getStore();
 				setStore({
-					randomImage: store.allImages[Math.floor(Math.random() * store.allImages.length)].download_url
+					randomImage:
+						store.allSpiritualImages[Math.floor(Math.random() * store.allSpiritualImages.length)].image
+							.sizes.large
+				});
+				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
+			},
+			generateInspirationalPair: () => {
+				const store = getStore();
+				setStore({
+					randomImage:
+						store.allInspirationalImages[Math.floor(Math.random() * store.allInspirationalImages.length)]
+							.image.sizes.large
 				});
 				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
 			},
@@ -70,7 +94,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					randomImage:
 						store.allFitnessImages[Math.floor(Math.random() * store.allFitnessImages.length)].image.sizes
-							.medium
+							.large
 				});
 
 				setStore({
