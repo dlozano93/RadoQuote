@@ -32,7 +32,7 @@ export const Navbar = () => {
 							<li className="nav-item mx-2 active">
 								<Link to="/">
 									<a className="nav-link" href="#">
-										Home <span className="sr-only">(current)</span>
+										Home <span className="sr-only bg-success">(current)</span>
 									</a>
 								</Link>
 							</li>

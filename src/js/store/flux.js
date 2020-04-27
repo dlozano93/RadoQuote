@@ -89,6 +89,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
 			},
+
 			generateFitnessPair: () => {
 				const store = getStore();
 				setStore({
