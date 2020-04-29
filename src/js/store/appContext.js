@@ -25,8 +25,8 @@ const injectContext = PassedComponent => {
 			state.actions.getAllImages();
 			state.actions.getAllQuotes();
 			state.actions.getAllFitnessQuotes();
-			// state.actions.getAllInspirationalQuotes();
-			// state.actions.getAllSpiritualQuotes();
+			state.actions.getAllInspirationalQuotes();
+			state.actions.getAllSpiritualQuotes();
 			state.actions.getAllFitnessImages();
 			state.actions.getAllInspirationalImages();
 			state.actions.getAllSpiritualImages();

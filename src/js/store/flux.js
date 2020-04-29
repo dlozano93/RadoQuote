@@ -26,6 +26,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(data);
 					});
 			},
+			getAllInspirationalQuotes: () => {
+				fetch(
+					"https://8080-dae0ec2d-e971-4fe6-aceb-4bbe348a1638.ws-us02.gitpod.io/wp-json/sample_api/v1/inspirationalquote"
+				)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ allInspirationalQuotes: data });
+						console.log(data);
+					});
+			},
+			getAllSpiritualQuotes: () => {
+				fetch(
+					"https://8080-dae0ec2d-e971-4fe6-aceb-4bbe348a1638.ws-us02.gitpod.io/wp-json/sample_api/v1/spiritualquote"
+				)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ allSpiritualQuotes: data });
+						console.log(data);
+					});
+			},
+
 			getAllImages: () => {
 				fetch("https://picsum.photos/v2/list")
 					.then(resp => resp.json())
@@ -78,7 +99,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						store.allSpiritualImages[Math.floor(Math.random() * store.allSpiritualImages.length)].image
 							.sizes.large
 				});
-				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
+				setStore({
+					randomQuote: store.allSpiritualQuotes[Math.floor(Math.random() * store.allSpiritualQuotes.length)]
+				});
 			},
 			generateInspirationalPair: () => {
 				const store = getStore();
@@ -87,7 +110,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						store.allInspirationalImages[Math.floor(Math.random() * store.allInspirationalImages.length)]
 							.image.sizes.large
 				});
-				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
+				setStore({
+					randomQuote:
+						store.allInspirationalQuotes[Math.floor(Math.random() * store.allInspirationalQuotes.length)]
+				});
 			},
 
 			generateFitnessPair: () => {
