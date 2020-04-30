@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.scss";
 import { Context } from "../store/appContext";
+import theKuoterLogo from "./theKuoterLogo.png";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
@@ -12,26 +13,18 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg  border-custom content d-flex justify-content-around">
+			<nav className="navbar navbar-expand-lg py-0 navbar-light bg-light">
 				<div className="col">
-					<Link to="/">
-						<a className="navbar-brand" href="#">
-							{"Kuoter"}
-						</a>
-					</Link>
+					<img
+						src={theKuoterLogo}
+						width="10"
+						lenght="10"
+						alt=""
+						className="d-inline-block align-middle mr-3"
+					/>
 				</div>
 
 				<div className="row mx-3 d-flex justify-content-around">
-					<button
-						className="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarNavDropdown"
-						aria-controls="navbarNavDropdown"
-						aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span className="navbar-toggler-icon" />
-					</button>
 					<div className="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul className="navbar-nav">
 							<li className="nav-item mx-2 active">
