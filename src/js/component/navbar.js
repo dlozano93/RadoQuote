@@ -36,35 +36,7 @@ export const Navbar = () => {
 									</a>
 								</Link>
 							</li>
-							<li className="nav-item mx-2">
-								<Link to="/">
-									<a className="nav-link" href="#" onClick={() => actions.generateFitnessPair()}>
-										Fitness Quote
-									</a>
-								</Link>
-							</li>
-							<li className="nav-item mx-2">
-								<Link to="/">
-									<a
-										className="nav-link"
-										href="#"
-										onClick={() => actions.generateInspirationalPair()}>
-										Inspirational Quote
-									</a>
-								</Link>
-							</li>
-							<li className="nav-item mx-2">
-								<Link to="/">
-									<a className="nav-link" href="#" onClick={() => actions.generateSpiritualPair()}>
-										Spiritual Quote
-									</a>
-								</Link>
-							</li>
-							<li className="nav-item mx-2">
-								<a className="nav-link" href="#" onClick={() => actions.generateRandomPair()}>
-									Random Quote
-								</a>
-							</li>
+
 							<li className="nav-item mx-2 dropdown">
 								<Link to="/about">
 									<a className="nav-link dropdown-toggle">About us</a>

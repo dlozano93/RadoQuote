@@ -88,7 +88,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			generateRandomPair: () => {
 				const store = getStore();
 				setStore({
-					randomImage: store.allImages[Math.floor(Math.random() * store.allImages.length)].download_url
+					randomImage:
+						store.allInspirationalImages[Math.floor(Math.random() * store.allInspirationalImages.length)]
+							.image.sizes.medium
 				});
 				setStore({ randomQuote: store.allQuotes[Math.floor(Math.random() * store.allQuotes.length)] });
 			},
@@ -97,7 +99,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					randomImage:
 						store.allSpiritualImages[Math.floor(Math.random() * store.allSpiritualImages.length)].image
-							.sizes.large
+							.sizes.medium
 				});
 				setStore({
 					randomQuote: store.allSpiritualQuotes[Math.floor(Math.random() * store.allSpiritualQuotes.length)]
@@ -108,7 +110,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					randomImage:
 						store.allInspirationalImages[Math.floor(Math.random() * store.allInspirationalImages.length)]
-							.image.sizes.large
+							.image.sizes.medium
 				});
 				setStore({
 					randomQuote:
@@ -121,7 +123,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					randomImage:
 						store.allFitnessImages[Math.floor(Math.random() * store.allFitnessImages.length)].image.sizes
-							.large
+							.medium
 				});
 
 				setStore({
