@@ -21,7 +21,7 @@ export const Home = () => {
 						<img src={spiritual} />
 					</div>
 				</div>
-				<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-5 py-5">
+				<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
 					<ImageCard />
 				</div>
 				<div className="col d-flex justify-content-around">

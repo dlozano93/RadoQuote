@@ -3,7 +3,8 @@ font-family: 'Montserrat', sans-serif;
 
   }
 img {
-    width: 200px
+    width: 200px;
+    padding: 5px;
 
 }
 
@@ -11,6 +12,8 @@ img {
   transition: filter .5s ease-in-out;
   -webkit-filter: grayscale(1000%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(100%); /* FF 35+ */
+  border: 2px solid #ddd;
+  border-radius: 4px;
   
 }
 .img-thumb:hover {
@@ -21,5 +24,20 @@ img {
 .bg-custom { background-color:#fafafa
 }
 
-.bg-alert-custom { background-color:#b2f5fa
+.bg-alert-custom { background-color:#fafafa
+}
+
+h5 {
+
+    font-family: 'Satisfy', cursive,
+
+}
+
+.card-text {
+    font-family: 'Satisfy', cursive, lighter;
+}
+
+.logo {
+
+    font-family: 'Pacifico', cursive;
 }
