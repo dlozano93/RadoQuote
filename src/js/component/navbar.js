@@ -5,13 +5,18 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+
+	function refreshPage() {
+		window.location.reload(false);
+	}
+
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light content d-flex justify-content-around">
 				<div className="col">
 					<Link to="/">
 						<a className="navbar-brand" href="#">
-							{"Random Quote Generator"}
+							{"Kuoter"}
 						</a>
 					</Link>
 				</div>
@@ -32,7 +37,7 @@ export const Navbar = () => {
 							<li className="nav-item mx-2 active">
 								<Link to="/">
 									<a className="nav-link" href="#">
-										Home <span className="sr-only bg-success">(current)</span>
+										<span onClick={refreshPage}>Home</span>
 									</a>
 								</Link>
 							</li>
