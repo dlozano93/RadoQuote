@@ -12,7 +12,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light content d-flex justify-content-around">
+			<nav className="navbar navbar-expand-lg  border-custom content d-flex justify-content-around">
 				<div className="col">
 					<Link to="/">
 						<a className="navbar-brand" href="#">

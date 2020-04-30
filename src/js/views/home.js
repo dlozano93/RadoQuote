@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import fitness from "../../img/fitness.jpg";
+import spiritual from "../../img/spiritual.jpg";
+import random from "../../img/random.jpg";
+import inspirational from "../../img/inspirational.jpg";
 import "../../styles/home.scss";
 import { ImageCard } from "../component/imagecard";
 import { Context } from "../store/appContext";
@@ -9,24 +12,24 @@ export const Home = () => {
 
 	return (
 		<>
-			<div className="container-fluid bg-warning">
+			<div className="container-fluid bg-custom">
 				<div className="col d-flex justify-content-around">
-					<div className="btn btn-success" onClick={() => actions.generateInspirationalPair()}>
-						{"inspo"}
+					<div className="img-thumb" onClick={() => actions.generateInspirationalPair()}>
+						<img src={inspirational} />
 					</div>
-					<div className="btn btn-success" onClick={() => actions.generateSpiritualPair()}>
-						{"spirito"}
+					<div className="img-thumb" onClick={() => actions.generateSpiritualPair()}>
+						<img src={spiritual} />
 					</div>
 				</div>
-				<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto bg-info my-5 py-5">
+				<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-5 py-5">
 					<ImageCard />
 				</div>
 				<div className="col d-flex justify-content-around">
-					<div className="btn btn-success" onClick={() => actions.generateFitnessPair()}>
-						{"fitno"}
+					<div className="img-thumb" onClick={() => actions.generateFitnessPair()}>
+						<img src={fitness} />
 					</div>
-					<div className="btn btn-success" onClick={() => actions.generateRandomPair()}>
-						{"rando"}
+					<div className="img-thumb" onClick={() => actions.generateRandomPair()}>
+						<img src={random} />
 					</div>
 				</div>
 				<br />
