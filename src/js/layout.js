@@ -24,6 +24,7 @@ export const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+					<br />
 					<Switch>
 						<Route exact path="/" component={Home} />
 
