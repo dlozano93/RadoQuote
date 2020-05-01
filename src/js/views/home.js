@@ -77,7 +77,9 @@ export const Home = () => {
 						</div>
 					</div>
 
-					<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
+					<div
+						style={{ backgroundColor: "lightSkyBlue" }}
+						className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
 						<ImageCard id="capture" />
 						{/* <button onClick="savePhoto()">Save Quote</button> */}
 					</div>

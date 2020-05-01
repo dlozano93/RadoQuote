@@ -36,18 +36,17 @@ export const Navbar = () => {
 							</li>
 
 							<li className="nav-item mx-2 dropdown">
-								<Link to="/about">
-									<a className="nav-link dropdown-toggle">About us</a>
-								</Link>
+								<a className="nav-link dropdown-toggle">Info</a>
+
 								<div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 									<Link to="/about/faq">
 										<a className="dropdown-item" href="#">
-											{"FAQ"}
+											{"About"}
 										</a>
 									</Link>
 									<Link to="/about/contact">
 										<a className="dropdown-item" href="#">
-											{"Contact Us!"}
+											{"Contact"}
 										</a>
 									</Link>
 								</div>
