@@ -22,29 +22,32 @@ export const Home = () => {
 
 	return (
 		<>
-			<div className="container-fluid bg-custom">
-				<div className="col d-flex justify-content-around">
-					<div className="img-thumb" onClick={() => actions.generateInspirationalPair()}>
-						<img src={inspirational} />
+			<div className="container">
+				<div className="row">
+					<div className="col">
+						<div className="col d-flex justify-content-around">
+							<div className="img-thumb" onClick={() => actions.generateInspirationalPair()}>
+								<img src={inspirational} />
+							</div>
+							<div className="img-thumb" onClick={() => actions.generateSpiritualPair()}>
+								<img src={spiritual} />
+							</div>
+						</div>
+						<div className="col d-flex justify-content-around">
+							<div className="img-thumb" onClick={() => actions.generateFitnessPair()}>
+								<img src={fitness} />
+							</div>
+							<div className="img-thumb" onClick={() => actions.generateRandomPair()}>
+								<img src={random} />
+							</div>
+						</div>
 					</div>
-					<div className="img-thumb" onClick={() => actions.generateSpiritualPair()}>
-						<img src={spiritual} />
-					</div>
-				</div>
-				<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
-					<ImageCard id="capture" />
-					{/* <button onClick="savePhoto()">Save Quote</button> */}
-				</div>
 
-				<div className="col d-flex justify-content-around">
-					<div className="img-thumb" onClick={() => actions.generateFitnessPair()}>
-						<img src={fitness} />
-					</div>
-					<div className="img-thumb" onClick={() => actions.generateRandomPair()}>
-						<img src={random} />
+					<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
+						<ImageCard id="capture" />
+						{/* <button onClick="savePhoto()">Save Quote</button> */}
 					</div>
 				</div>
-				<br />
 			</div>
 		</>
 	);
