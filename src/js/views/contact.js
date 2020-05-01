@@ -4,12 +4,8 @@ import "../../styles/home.scss";
 
 export const Contact = () => (
 	<div className="text-center mt-5">
-		<h1>Contact Us Here</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+		<h1>Contact Info</h1>
+		<br />
+		<p>Please email us at kuoterapp@gmail.com. We would love to hear from you!</p>
 	</div>
 );
