@@ -21,10 +21,14 @@ export const Home = () => {
 	// };
 
 	return (
-		<>
+		<div style={{ backgroundColor: "black" }}>
 			<div className="container">
 				<div className="row">
 					<div className="col">
+						<div className="col d-flex justify-content-around">
+							<br />
+							<br />
+						</div>
 						<div className="col d-flex justify-content-around">
 							<div className="img-thumb" onClick={() => actions.generateInspirationalPair()}>
 								<img src={inspirational} />
@@ -79,6 +83,6 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
