@@ -20,7 +20,7 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div style={{ backgroundColor: "black" }} className="d-flex flex-column h-100">
+		<div style={{ backgroundColor: "lightSkyBlue" }} className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />

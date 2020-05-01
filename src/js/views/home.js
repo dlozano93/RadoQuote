@@ -21,7 +21,7 @@ export const Home = () => {
 	// };
 
 	return (
-		<div style={{ backgroundColor: "black" }}>
+		<div style={{ backgroundColor: "lightSkyBlue" }}>
 			<div className="container">
 				<div className="row">
 					<div className="col">
