@@ -17,7 +17,7 @@ export const ImageCard = props => {
 			{!store.randomImage ? (
 				<div />
 			) : (
-				<div className="card mx-auto" style={{ width: "400px" }}>
+				<div className="card mx-auto" id="capture" style={{ width: "400px" }}>
 					<img src={store.randomImage} className="card-img-top" alt="..." />
 					<div className="card-body text-center">
 						<h5 className="card-text">{'"' + store.randomQuote.text + '"'}</h5>

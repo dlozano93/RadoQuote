@@ -3,9 +3,23 @@ import { Link } from "react-router-dom";
 import "../../styles/navbar.scss";
 import { Context } from "../store/appContext";
 import theKuoterLogo from "./theKuoterLogo.png";
+import * as jsPDF from "jspdf";
+import * as html2canvas from "html2canvas";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+
+	const savePhoto = () => {
+		const input = document.getElementById("capture");
+		html2canvas(input).then(canvas => {
+			const imgData = canvas.toDataURL("image/png");
+			const pdf = new jsPDF("p", "px", "a4");
+			var width = pdf.internal.pageSize.getWidth();
+			var height = pdf.internal.pageSize.getHeight();
+			pdf.addImage(imgData, "JPEG", 0, 0, width, height);
+			pdf.save("test.pdf");
+		});
+	};
 
 	function refreshPage() {
 		window.location.reload(false);
@@ -34,6 +48,20 @@ export const Navbar = () => {
 									</a>
 								</Link>
 							</li>
+							<li className="nav-item mx-2 active">
+								<Link to="/">
+									<a className="nav-link" href="#">
+										<span onClick={() => savePhoto()}>Save Quote</span>
+									</a>
+								</Link>
+							</li>
+
+							{/* <li className="nav-item mx-2 active">
+								<Link to="/">
+									<a className="nav-link" href="#" />
+									<span onClick={() => savePhoto()}>Save Quote</span>
+								</Link>
+							</li> */}
 
 							<li className="nav-item mx-2 dropdown">
 								<Link to="/about">
@@ -54,6 +82,19 @@ export const Navbar = () => {
 							</li>
 						</ul>
 					</div>
+				</div>
+				{/* <div className="button">
+					<button onClick={() => savePhoto()}>Save Quote</button>
+				</div> */}
+
+				<div>
+					<a className="fb-ic" href="https://www.facebook.com/">
+						<i className="fab fa-facebook-f fa-lg white-text mr-md-3 mr-2 fa-1x"> </i>
+					</a>
+
+					<a className="ins-ic" href="https://www.instagram.com/">
+						<i className="fab fa-instagram fa-lg white-text mr-md-3 mr-2 fa-1x"> </i>
+					</a>
 				</div>
 			</nav>
 		</>

@@ -6,17 +6,21 @@ import inspirational from "../../img/inspirational.jpg";
 import "../../styles/home.scss";
 import { ImageCard } from "../component/imagecard";
 import { Context } from "../store/appContext";
-import html2canvas from "/workspace/RandoQuote/node_modules/html2canvas/dist/html2canvas.js";
+import * as jsPDF from "jspdf";
+import * as html2canvas from "html2canvas";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
-	// savePhoto => {
-	// 	html2canvas(document.querySelector("#capture")).then(canvas => {
-	// 		// document.body.appendChild(canvas);
-	// 		image = canvas.toDataURL("image/jpg").replace("image/jpg", "image/octet-stream");
-	// 		console.log(image);
-	// 		window.location.href = image;
+	// const savePhoto = () => {
+	// 	const input = document.getElementById("capture");
+	// 	html2canvas(input).then(canvas => {
+	// 		const imgData = canvas.toDataURL("image/png");
+	// 		const pdf = new jsPDF("p", "px", "a4");
+	// 		var width = pdf.internal.pageSize.getWidth();
+	// 		var height = pdf.internal.pageSize.getHeight();
+	// 		pdf.addImage(imgData, "JPEG", 0, 0, width, height);
+	// 		pdf.save("test.pdf");
 	// 	});
 	// };
 
@@ -29,7 +33,7 @@ export const Home = () => {
 							<br />
 							<br />
 						</div>
-						<div className="col d-flex justify-content-around">
+						<div className="col d-flex justify-content-around" id="thumb">
 							<div className="img-thumb" onClick={() => actions.generateInspirationalPair()}>
 								<img src={inspirational} />
 							</div>
@@ -41,7 +45,7 @@ export const Home = () => {
 							<br />
 						</div>
 
-						<div className="col d-flex justify-content-around">
+						<div className="col d-flex justify-content-around" id="thumb">
 							<div className="img-thumb" onClick={() => actions.generateFitnessPair()}>
 								<img src={fitness} />
 							</div>
@@ -49,37 +53,10 @@ export const Home = () => {
 								<img src={random} />
 							</div>
 						</div>
-
-						<div className="mb-5 flex-center">
-							<a className="fb-ic">
-								<i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-							</a>
-
-							<a className="tw-ic">
-								<i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-							</a>
-
-							<a className="gplus-ic">
-								<i className="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-							</a>
-
-							<a className="li-ic">
-								<i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-							</a>
-
-							<a className="ins-ic">
-								<i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-							</a>
-
-							<a className="pin-ic">
-								<i className="fab fa-pinterest fa-lg white-text fa-1x"> </i>
-							</a>
-						</div>
 					</div>
 
 					<div className="col-xs-6 col-md-6 col-lg-6 mx-auto my-auto  bg-alert-custom my-0 py-6">
-						<ImageCard id="capture" />
-						{/* <button onClick="savePhoto()">Save Quote</button> */}
+						<ImageCard />
 					</div>
 				</div>
 			</div>
